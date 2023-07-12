@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.container{
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins",sans-serif;
+    background-color: #001848;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    color: lightblue;
+}
+.pivot{
+    
+    /* top: 46vh; */
+}
+.currentCover{
+    background-image: url("img/447-photo.png");
+    background-size: cover;
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 50px 0;
+    border: 8px solid lightblue;
+    position: relative;
+    animation: rotate 17s forwards infinite;
+    animation-play-state: paused;
+}
+.currentCover.play-on{
+    animation-play-state: running;
+}
+@keyframes rotate {
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.currentCover::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #001848;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.progressBar{
+    width: 85%;
+    height: 6px;
+    background-color: lightblue;
+    margin: 50px 0;
+    position: relative;
+    /* cursor: pointer; */
+}
+.progressBar input{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    position: absolute;
+    background: transparent;
+    bottom: -2px;
+    left: 0;
+    overflow: hidden;
+}
+.progressBar input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    box-shadow: -900px 0 0 900px aqua;
+    width: 1px;
+    height: 6px;
+}
+.currentTime{
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+.stopTime{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+}
+.volume{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.vol{
+    cursor: pointer;
+    width: 30px;
+    display: block;
+    aspect-ratio: 1/1;
+    background-color: lightblue;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 5px;
+}
+.vol:hover~.volslider{
+    display: block;
+}
+.volslider{
+    width: 100px;
+    height: 5px;
+    display: none;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px auto;
+}
+.backward{
+    cursor: pointer;
+}
+.prev,.play,.next,.pause{
+    width: 30px;
+    aspect-ratio: 1/1;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+.play{
+    transform: scale(1.8);
+    padding: 1px;
+}
+.pause{
+    transform: scale(1.5);
+    padding: 1px;
+    display: none;
+}
+.prev{
+    rotate: 180deg;
+}
+.forward{
+    cursor: pointer;
+}
+@media screen and (min-width : 541px) {
+    .main{
+        background-color: #001848;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    .container{
+        border: 2px solid lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        height: 96vh;
+    }
+    .currentCover{
+        margin: 20px 0;
+    }
+}

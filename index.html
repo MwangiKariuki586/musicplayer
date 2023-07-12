@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>music</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <audio class="boom" src="./music/song 1.mp3"></audio>
+            <h1 class="song">Song name</h1>
+            <h2 class="artiste">Artist</h2>
+            <div class="pivot"></div>
+            <div class="currentCover"></div>
+            <!-- <img class="currentCover" src="./img/447-photo.png" alt=""> -->
+            <div class="progressBar">
+                <input min="0" max="100" class="range" type="range" name="" id="">
+                <div class="currentTime"></div>
+                <div class="stopTime"></div>
+            </div>
+            <div class="volume">
+                <img src="./img/volume-up.png" alt="" class="vol">
+                <input min="1" max="100" value="30" class="volslider" type="range" name="" id="">
+            </div>
+            <div class="control">
+                <h3 class="backward">-10</h3>
+                <img src="./img/arrow-right.png" alt="" class="prev">
+                <img src="./img/play-button.png" alt="" class="play">
+                <img src="./img/pause.png" alt="" class="pause"> 
+                <img src="./img/arrow-right.png" alt="" class="next">
+                <h3 class="forward">+10</h3>
+            </div>
+        </div>
+    </div>
+<script src="song.js"></script>
+<script src="index.js"></script>   
+</body>
+</html>
